@@ -12,9 +12,14 @@ var GameLibrary = function(librarytitle){
   this.games = [];
 };
 
+GameLibrary.prototype.addGame = function(game) {
+  this.games.push(game);
+};
+
 GameLibrary.prototype.renderLibrary = function(DOMElement){
   DOMElement.append('<h3>' + this.librarytitle + '</h3><br>');
   for (var i = 0; i < this.games.length; i++) {
-    this.games[i].render();
+    DOMElement.append('<p>Title : ' + this.games[i].title + '<br>Genre : ' +this.games[i].genre);
   }
 };
+
