@@ -3,3 +3,17 @@
   padding: 10px;
   border: 1px solid black;
 }
+
+.show-library{
+
+  margin-right: 10px;
+}
+
+.show-games{
+
+  margin-top: 20px;
+}
+
+.form-horizontal{
+  margin-left: 30px;
+}

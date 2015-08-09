@@ -3,7 +3,7 @@ var Game = function (title, genre){
   this.genre = genre;
 };
 
-Game.prototype.render = function(DOMElement, game){
+Game.prototype.render = function(DOMElement){
   DOMElement.append('<p>Title : ' + this.title + '<br>Genre : ' +this.genre);
 };
 
