@@ -4,17 +4,15 @@ var libraryCounter = 0;
 $(document).on('ready', function() {
   console.log('sanity check!');
 
-  $('.submit-library').on('click', function(event){
 
-    event.preventDefault();
+    $('.submit-library').on('click', function(event){
 
-    var library = new GameLibrary($('#gameLibraryTitle').val());
+      event.preventDefault();
+      var library = new GameLibrary($('#gameLibraryTitle').val());
+      libraryArray.push(library);
 
-    libraryArray.push(library);
+    });
 
-    $('#gameLibraryTitle').val('');
-
-  });
 
   $('.submit-game').on('click', function(event){
 
@@ -33,9 +31,6 @@ $(document).on('ready', function() {
     $('#gameTitle').val('');
     $('#gameGenre').val('');
 
-    console.log(game);
-    console.log(libraryArray[libraryCounter].games);
-
    }
 
   });
@@ -44,8 +39,15 @@ $(document).on('ready', function() {
 
     event.preventDefault();
 
-    libraryArray[0].renderLibrary($('.show-games-library'));
+    libraryArray[libraryCounter].renderLibrary($('.show-games-library'));
 
+  });
+
+  $('.new-library').on('click', function(){
+
+    $('#gameLibraryTitle').val('');
+
+    libraryCounter +=1 ;
   });
 
 });

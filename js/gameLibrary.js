@@ -1,6 +1,6 @@
 var Game = function (title, genre){
-  this.title = title;
-  this.genre = genre;
+  this.title = title || undefined;
+  this.genre = genre || undefined;
 };
 
 Game.prototype.render = function(DOMElement){
@@ -8,7 +8,7 @@ Game.prototype.render = function(DOMElement){
 };
 
 var GameLibrary = function(librarytitle){
-  this.librarytitle = librarytitle;
+  this.librarytitle = librarytitle || undefined;
   this.games = [];
 };
 
