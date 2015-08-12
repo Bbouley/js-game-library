@@ -51,6 +51,21 @@
 
                <button type = 'submit' class = 'btn submit-game btn-default'>Submit Game</button><br><br>
 
+               <!-- Change this so that it's a dropdown menu that shows game libraries that are currently stored -->
+
+               <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Libraries <span class="caret"></span>
+                  </button>
+
+                  <!-- on submit playlist, addd playlist to this menu -->
+
+                  <ul class="library-list dropdown-menu">
+
+                  </ul>
+
+                </div>
+
                <button type = 'button' class = 'btn show-library btn-default'>Show Library</button><br><br>
 
                <button type = 'button' class = 'btn new-library btn-default'>New Library</button><br>
@@ -64,9 +79,19 @@
 
          <div class = 'row'>
 
-         <h1>Games List</h1>
+           <h1>Libraries</h1>
 
-          <div class = 'show-games col-xs-12'>
+            <div class = 'library-titles'>
+
+            </div>
+
+         </div>
+
+         <div class = 'row'>
+
+           <h1>Games List</h1>
+
+         <div class = 'show-games col-xs-12'>
 
 
 
