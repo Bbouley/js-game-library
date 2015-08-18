@@ -41,6 +41,8 @@ $(document).on('ready', function() {
 
     libraryArray[libraryCounter].renderLibrary($('.show-games-library'));
 
+    game.deleteGameList($('.delete-games-list'));
+
     $('#gameTitle').val('');
     $('#gameGenre').val('');
 
@@ -68,6 +70,22 @@ $(document).on('ready', function() {
     var index = ($('.libraryTitleList')).index($(this));
 
     libraryArray[index].renderLibrary($('.show-games-library'));
+
+  });
+
+  $(document).on('click', '.deleteThisGame', function(event){
+    event.preventDefault();
+    var name = ($(this).text());
+    $('.show-games').html('');
+    for (var i = 0; i < libraryArray.length; i++) {
+      var games = libraryArray[i].games;
+      for (var j = 0; j < games.length; j++) {
+        if(games[j].title === name){
+          games.splice(j, 1);
+        } games[j].render($('.show-games'));
+      } libraryArray[i].renderLibrary($('.show-games-library'));
+    }
+      $(this).remove();
   });
 
 });

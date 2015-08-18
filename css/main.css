@@ -26,3 +26,9 @@
   cursor: pointer;
   cursor: hand;
 }
+
+.deleteThisGame:hover{
+  background-color: red;
+  cursor: pointer;
+  cursor: hand;
+}

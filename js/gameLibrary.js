@@ -7,6 +7,10 @@ Game.prototype.render = function(DOMElement){
   DOMElement.append('<p>Title : ' + this.title + '<br>Genre : ' +this.genre);
 };
 
+Game.prototype.deleteGameList = function(DOMElement){
+  DOMElement.append('<p class = \'deleteThisGame\'>'+this.title +'</p>');
+};
+
 var GameLibrary = function(librarytitle){
   this.librarytitle = librarytitle || undefined;
   this.games = [];
