@@ -29,6 +29,18 @@ GameLibrary.prototype.renderLibrary = function(DOMElement){
 };
 
 GameLibrary.prototype.renderTitle = function(DOMElement, tag){
-  DOMElement.append('<' +tag+ '>' + this.librarytitle + '</'+tag+'>');
+  DOMElement.append('<'+tag+'/>' + this.librarytitle + '</' +tag+'>');
 };
+
+GameLibrary.prototype.renderListTitle = function(DOMElement){
+  DOMElement.append('<li class = \'libraryTitleList\'>' + this.librarytitle + '</li>' );
+};
+
+function showClickedLibrary(element){
+  for (var i = 0; i < libraryArray.length; i++) {
+      if(element.html() === libraryArray[i].title){
+        libraryArray[i].renderLibrary($('.show-games-library'));
+      }
+    }
+  }
 
