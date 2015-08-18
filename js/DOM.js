@@ -15,9 +15,12 @@ $(document).on('ready', function() {
 
       libraryArray[libraryCounter].renderLibrary($('.show-games-library'));
 
-      libraryArray[libraryCounter].renderTitle($('.library-titles'), 'h1');
+      libraryArray[libraryCounter].renderTitle($('.library-titles'), 'h3');
 
       libraryArray[libraryCounter].renderListTitle($('.library-list'));
+
+      $('#gameLibraryTitle').hide();
+      $('.submit-library').hide();
 
     });
 
@@ -45,19 +48,15 @@ $(document).on('ready', function() {
 
   });
 
-  $('.show-library').on('click', function(event){
-
-    event.preventDefault();
-
-    libraryArray[libraryCounter].renderLibrary($('.show-games-library'));
-
-  });
 
   $('.new-library').on('click', function(){
 
     $('.show-games-library').html('');
 
     $('#gameLibraryTitle').val('');
+
+    $('#gameLibraryTitle').show();
+    $('.submit-library').show();
 
      libraryCounter += 1;
 

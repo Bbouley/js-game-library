@@ -29,7 +29,7 @@ GameLibrary.prototype.renderLibrary = function(DOMElement){
 };
 
 GameLibrary.prototype.renderTitle = function(DOMElement, tag){
-  DOMElement.append('<'+tag+'/>' + this.librarytitle + '</' +tag+'>');
+  DOMElement.append('<'+tag+'>' + this.librarytitle + '</' +tag+'>');
 };
 
 GameLibrary.prototype.renderListTitle = function(DOMElement){
